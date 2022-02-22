@@ -8,20 +8,23 @@
     --color-nav:#DB524C;
     --color-button-text:#575757;
     --color-back-button: #d1cfcf75;
+    --font-h2:20px;
+    --font-h3:16px;
+    --font-paragraphs: 12px;
+    --font-family:'Varela Round', sans-serif;
 }
 body{
     margin: 0;
-    font-family:'Varela Round', sans-serif;
+    font-family:var(--font-family);
 }
 a, ul{
     text-decoration: none;
     list-style: none;
     color: var(--color-text);
 }
-#wrapper{
+.wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 4fr 1fr 1fr 1fr 1fr 1fr 1fr;
     background-color: var(--color-background);
 
 }
@@ -32,12 +35,15 @@ nav ul{
 display: inline-flex;
 justify-content: center;
 grid-row: 1;
+color: var(--color-text);
 }
 nav ul .tittle{
     justify-content: flex-start;
+    
 }
 nav ul .actions{
     justify-content: flex-end;
+    
 }
 .tittle li{
     font-weight: 600;
@@ -47,6 +53,7 @@ background-color:var(--color-back-button);
 border-radius: 5px;
 margin:0.2rem;
 padding: 0.5rem;
+color: var(--color-text);
 }
 /*CLOCK BOX*/
 .main2{
@@ -62,6 +69,7 @@ padding: 0.5rem;
     padding: 0;
 }
 .clockHeader li{
+color: var(--color-text);
 display: inline-flex;
 border-radius: 5px;
 margin:0.2rem;
@@ -71,7 +79,7 @@ padding: 0.5rem;
     background-color: #541c1fad;
 }
 .clock{
-    color: aliceblue;
+    color: white;
     font-size: 7rem;
     text-align: center;
     font-weight: 700;
@@ -93,6 +101,7 @@ padding: 0.5rem;
     color: rgba(255, 255, 255, 0.726);
 }
 .outsideClock .Text{
+    line-height: 1.5;
     text-align: center;
     color: white;
 }
@@ -150,6 +159,46 @@ b{
     color: white;
     font-size: 1.5rem;
 }
+
+/*WHITE PART*/ 
+
+.whiteBack{
+    font-family: var(--font-family);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: white;
+    line-height: 1.5;
+    
+}
+.textContent{
+    grid-column: 2;
+    
+}
+.textContent h2{
+    font-size: var(--font-h2);
+    color: var(--color-titles);
+}
+.textContent h3{
+    font-size: var(--font-h3);
+    color: var(--color-titles);
+}
+.textContent ol li, ul li{
+    line-height: 2;
+}
+.textContent p,li{
+    font-size: var(--font-paragraphs);
+    color:var(--color-button-text);
+}
+footer{
+    grid-column: 1/4;
+    text-align: center;
+    color: var(--color-button-text);
+    font-size: var(--font-paragraphs);
+    border-top: solid 1px #57575763;
+
+}
+
+
 
 
 
