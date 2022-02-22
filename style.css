@@ -189,6 +189,14 @@ b{
     font-size: var(--font-paragraphs);
     color:var(--color-button-text);
 }
+.textContent ul li::before {
+        content: "\2022";
+        color: var(--color-background);
+        font-weight: bold;
+        display: inline-block; 
+        width: 1em;
+        margin-left: -1em;
+}
 footer{
     grid-column: 1/4;
     text-align: center;
